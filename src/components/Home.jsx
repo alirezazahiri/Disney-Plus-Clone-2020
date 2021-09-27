@@ -1,15 +1,26 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 
+// Redux
+import { useDispatch } from "react-redux";
+import { fetchActions } from "../redux/movies/moviesAction";
+
 // Components
-import ImgSlider from './ImgSlider';
+import ImgSlider from "./ImgSlider";
 import Viewers from "./Viewers";
-// Movie Sections 
-import Trendings from './sections/Trendings';
-import NewDisneys from './sections/NewDisneys';
-import Originals from './sections/Originals';
-import Recommends from './sections/Recommends';
+// Movie Sections
+import Trendings from "./sections/Trendings";
+import NewDisneys from "./sections/NewDisneys";
+import Originals from "./sections/Originals";
+import Recommends from "./sections/Recommends";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(fetchActions());
+  }, []);
+
   return (
     <Container>
       <ImgSlider />

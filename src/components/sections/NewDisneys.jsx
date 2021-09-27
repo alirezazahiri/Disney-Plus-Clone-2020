@@ -9,7 +9,7 @@ import Movie from "../common/Movie";
 const NewDisneys = () => {
   const movies = useMovies("newDisneys");
 
-  return movies ? <Movie movies={movies} /> : "Loading...";
+  return movies ? <Movie movies={movies} title="New To Disney+"/> : "Loading...";
 };
 
 export default NewDisneys;

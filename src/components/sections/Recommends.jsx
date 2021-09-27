@@ -9,7 +9,7 @@ import Movie from "../common/Movie";
 const Recommends = () => {
   const movies = useMovies("recommends");
 
-  return movies ? <Movie movies={movies} /> : "Loading...";
+  return movies ? <Movie movies={movies} title="Recommends"/> : "Loading...";
 };
 
 export default Recommends;

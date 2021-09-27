@@ -9,7 +9,7 @@ import Movie from "../common/Movie";
 const Originals = () => {
   const movies = useMovies("originals");
 
-  return movies ? <Movie movies={movies} /> : "Loading...";
+  return movies ? <Movie movies={movies} title="Originals" /> : "Loading...";
 };
 
 export default Originals;

@@ -12,6 +12,7 @@ const Detail = () => {
 
   useEffect(() => {
     const movie = movies.find((movie) => movie.id === id);
+    console.log(movie)
     setDetailData(movie);
   }, []);
 
@@ -47,7 +48,7 @@ const Detail = () => {
             </Controls>
             <SubTitle>{detailData.subTitle}</SubTitle>
             <Description>{detailData.description}</Description>
-          </ContentMeta>{" "}
+          </ContentMeta>
         </>
       )}
     </Container>

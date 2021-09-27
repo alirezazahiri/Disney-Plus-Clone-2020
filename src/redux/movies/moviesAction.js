@@ -39,4 +39,14 @@ const getAll = () => {
   };
 };
 
-export { getNewDisneys, getRecommends, getOriginals, getTrendings, getAll };
+const fetchActions = () => {
+  return dispatch => {
+    dispatch(getNewDisneys())
+    dispatch(getOriginals())
+    dispatch(getRecommends())
+    dispatch(getTrendings())
+    dispatch(getAll())
+  }
+}
+
+export { fetchActions };

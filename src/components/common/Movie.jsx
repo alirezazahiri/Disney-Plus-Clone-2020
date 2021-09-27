@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 // Styled Components
 import { Content, Container, Wrap } from "./Wrap";
 
-const Movie = ({movies}) => {
+const Movie = ({movies, title}) => {
   return (
     <Container>
-      <h4>New to Disney+</h4>
+      <h4>{title}</h4>
       <Content>
         {movies &&
           movies.map((movie, key) => (
