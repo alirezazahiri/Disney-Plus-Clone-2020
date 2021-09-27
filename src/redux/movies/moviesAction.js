@@ -32,4 +32,11 @@ const getOriginals = () => {
   };
 };
 
-export { getNewDisneys, getRecommends, getOriginals, getTrendings };
+const getAll = () => {
+  return {
+    type: "GET_ALL",
+    payload: data.movies,
+  };
+};
+
+export { getNewDisneys, getRecommends, getOriginals, getTrendings, getAll };

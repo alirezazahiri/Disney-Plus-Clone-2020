@@ -3,6 +3,7 @@ const initialState = {
   originals: [],
   trendings: [],
   recommends: [],
+  all: [],
 };
 
 const moviesReducer = (state = initialState, action) => {
@@ -15,6 +16,8 @@ const moviesReducer = (state = initialState, action) => {
       return { ...state, recommends: action.payload };
     case "GET_ORIGINALS":
       return { ...state, originals: action.payload };
+    case "GET_ALL":
+      return { ...state, all: action.payload };
     default:
       return state;
   }

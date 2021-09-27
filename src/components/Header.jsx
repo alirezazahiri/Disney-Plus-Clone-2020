@@ -23,7 +23,6 @@ const Header = () => {
     dispatch(fetchUserRequest());
     auth.onAuthStateChanged((user) => {
       if (user) {
-        console.log(user)
         dispatch(fetchUserSuccess(user));
         history.push("/home");
       } else dispatch(fetchUserFailure("USER NOT FOUND - 404"));
